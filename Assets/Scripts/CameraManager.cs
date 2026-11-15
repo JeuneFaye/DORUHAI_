@@ -24,6 +24,24 @@ public class CameraDrag : MonoBehaviour
     private void Update()
     {
         MouseScroll();
+
+        //Camera up and down
+        Vector3 upAndDownControl = new Vector3(0, 0 , 0);
+        if (Input.GetKey(KeyCode.W)) upAndDownControl.y = +1f;
+        if (Input.GetKey(KeyCode.S)) upAndDownControl.y = -1f;
+        
+        Vector3 upAndDown = transform.up * upAndDownControl.y;
+        float moveSpeed = 40f;
+        transform.position += upAndDownControl * moveSpeed * Time.deltaTime;
+
+
+        //Camera Rotation
+        float cameraRotation = 0f;
+        if (Input.GetKey(KeyCode.Q)) cameraRotation = +1f;
+        if (Input.GetKey(KeyCode.E)) cameraRotation = -1f;
+
+        float rotationSpeed = 80f;
+        transform.eulerAngles += new Vector3(0, cameraRotation * rotationSpeed * Time.deltaTime, 0);
     }
 
     public void OnDrag(InputAction.CallbackContext ctx)
@@ -34,7 +52,7 @@ public class CameraDrag : MonoBehaviour
         }
         isDragging = ctx.started || ctx.performed;
     }
-
+    //Dragging function
     private void LateUpdate()
     {
         if (!isDragging) return;
@@ -43,6 +61,7 @@ public class CameraDrag : MonoBehaviour
         transform.position = origin - difference;
     }
 
+    //Mouse position to point and click
     private Vector3 GetMousePosition()
     {
         Vector3 MousePos = Mouse.current.position.ReadValue();
@@ -51,6 +70,7 @@ public class CameraDrag : MonoBehaviour
 
     }
 
+    //Scroll reference
     private void MouseScroll()
     {
         Debug.Log(Input.mouseScrollDelta.y);
