@@ -1,0 +1,8 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI%20Toolkit/MainMenuStyle.uss?fileID=7433441132597879392&amp;guid=29b08feb93678c3448f23fd64e16bfb9&amp;type=3#MainMenuStyle"/>
+    <ui:VisualElement name="Container" style="flex-grow: 1;">
+        <ui:Label text="DŌRUHAI" class="header" style="margin-top: 178px; font-size: 70px;"/>
+        <ui:Button text="Start" name="StartGameButton" class="button" style="margin-left: 126px; margin-right: 118px; margin-bottom: 80px; margin-top: 64px;"/>
+        <ui:Button text="Save" name="SaveGameButton" class="button" style="margin-top: -27px;"/>
+    </ui:VisualElement>
+</ui:UXML>

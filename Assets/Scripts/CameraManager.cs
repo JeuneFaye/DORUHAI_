@@ -73,7 +73,6 @@ public class CameraDrag : MonoBehaviour
     //Scroll reference
     private void MouseScroll()
     {
-        Debug.Log(Input.mouseScrollDelta.y);
 
         if (Input.mouseScrollDelta.y > 0)
         {

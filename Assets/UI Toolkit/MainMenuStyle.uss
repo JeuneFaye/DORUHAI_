@@ -1,0 +1,43 @@
+:root {
+}
+
+.header {
+    font-size: 60px;
+    -unity-text-outline-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    align-self: center;
+}
+
+.button {
+    font-size: 40px;
+    width: 240px;
+    height: 80px;
+    align-content: auto;
+    align-self: center;
+    justify-content: flex-start;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-top: 148px;
+    margin-right: 133px;
+    margin-bottom: 133px;
+    margin-left: 133px;
+    padding-top: 48px;
+    padding-right: 51px;
+    padding-bottom: 51px;
+    padding-left: 51px;
+    transition-duration: 0.35s;
+}
+
+.button:hover {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    padding-top: 0;
+    padding-right: 1.1px;
+    padding-bottom: 0;
+    padding-left: 1.1px;
+    -unity-background-image-tint-color: rgb(255, 239, 150);
+}
